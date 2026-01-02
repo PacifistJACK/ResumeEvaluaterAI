@@ -57,7 +57,7 @@ async def analyze_resume_vision(file: UploadFile = File(...)):
 
    
     payload = {
-        "model": "qwen/qwen-2.5-vl-7b-instruct:free",
+        "model": "nvidia/nemotron-nano-12b-v2-vl:free",
         "messages": [
             {
                 "role": "user",
