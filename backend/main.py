@@ -57,7 +57,7 @@ async def analyze_resume_vision(file: UploadFile = File(...)):
 
    
     payload = {
-        "model": "google/gemini-2.0-flash-exp:free",
+        "model": "mistralai/mistral-small-3.1-24b-instruct:free",
         "messages": [
             {
                 "role": "user",
