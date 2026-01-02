@@ -17,8 +17,8 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://resume210.onrender.com",
-        "https://resume210.onrender.com/"
+        "https://resume210.onrender.com/",
+        "https://resume210.onrender.com"
     ],
     allow_credentials=True,
     allow_methods=["*"],
