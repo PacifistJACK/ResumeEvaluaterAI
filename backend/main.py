@@ -57,7 +57,7 @@ async def analyze_resume_vision(file: UploadFile = File(...)):
 
    
     payload = {
-        "model": "mistralai/mistral-small-3.1-24b-instruct:free",
+        "model": "qwen/qwen-2.5-vl-7b-instruct:free",
         "messages": [
             {
                 "role": "user",
