@@ -20,7 +20,8 @@ const App = () => {
 
       try {
         // --- REAL BACKEND CONNECTION ---
-        const response = await fetch("https://resume210.onrender.com//analyze", {
+        // Change this in your App.js
+        const response = await fetch("https://resumeevaluaterai.onrender.com/analyze", {
           method: "POST",
           body: formData,
         });
@@ -40,7 +41,7 @@ const App = () => {
         setIsAnalyzing(false); // Stop loading
       }
     } else {
-        alert("Please upload a PDF file.");
+      alert("Please upload a PDF file.");
     }
   };
 
@@ -136,7 +137,7 @@ const App = () => {
                   onChange={handleFileUpload}
                   disabled={isAnalyzing}
                 />
-                
+
                 {isAnalyzing ? (
                   <div className="flex flex-col items-center">
                     <Loader2 className="w-16 h-16 text-blue-400 animate-spin mb-4" />
