@@ -57,7 +57,7 @@ async def analyze_resume_vision(file: UploadFile = File(...)):
 
    
     payload = {
-        "model": "nvidia/nemotron-nano-12b-v2-vl:free",
+        "model": "google/gemini-2.0-flash-exp:free",
         "messages": [
             {
                 "role": "user",
