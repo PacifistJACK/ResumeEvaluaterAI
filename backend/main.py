@@ -15,7 +15,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=["https://resume210.onrender.com/"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -75,7 +75,7 @@ async def analyze_resume_vision(file: UploadFile = File(...)):
 
     # 4. Payload with IMAGE DATA
     payload = {
-        "model": "qwen/qwen-2.5-vl-7b-instruct:free", # Vision Capable Model
+        "model": "mistralai/mistral-small-3.1-24b-instruct:free", # Vision Capable Model
         "messages": [
             {
                 "role": "user",
@@ -98,7 +98,7 @@ async def analyze_resume_vision(file: UploadFile = File(...)):
     headers = {
         "Authorization": f"Bearer {API_KEY}",
         "Content-Type": "application/json",
-        "HTTP-Referer": "http://localhost:3000",
+        "HTTP-Referer": "https://resume210.onrender.com/",
     }
 
     try:
