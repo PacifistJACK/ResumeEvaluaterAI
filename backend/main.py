@@ -57,7 +57,7 @@ async def analyze_resume_vision(file: UploadFile = File(...)):
 
    
     payload = {
-        "model": "google/gemini-flash-1.5-exp:free",
+        "model": "qwen/qwen-2.5-vl-7b-instruct:free",
         "messages": [
             {
                 "role": "user",
