@@ -38,6 +38,11 @@ def pdf_to_base64_image(file_bytes):
         print(f"Error converting PDF: {e}")
         return None
 
+@app.get("/")
+def root():
+    return {"status": "OK", "message": "Resume Evaluator API is running"}
+
+
 @app.post("/analyze")
 async def analyze_resume_vision(file: UploadFile = File(...)):
     if not file.filename.endswith(".pdf"):
