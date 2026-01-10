@@ -112,7 +112,7 @@ JSON format:
 """
 
     payload = {
-        "model": "qwen/qwen-2.5-vl-7b-instruct:free",
+        "model": "google/gemma-3-4b-it:free",
         "messages": [
             {
                 "role": "user",
