@@ -96,7 +96,7 @@ async def analyze_resume(file: UploadFile = File(...)):
         raise HTTPException(status_code=400, detail="Could not process PDF")
 
     prompt = """
-You are an expert resume reviewer.
+"You are an expert resume reviewer. Critically assess the provided resume to determine if it is professionally ready. Your review should focus primarily on the quality and relevance of the content, considering content to be slightly more important than the overall structure and design.
 
 Return ONLY valid JSON.
 NO explanations.
