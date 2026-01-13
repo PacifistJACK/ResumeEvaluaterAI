@@ -1,8 +1,25 @@
-import React, { useState, useRef } from 'react';
 import { Upload, FileText, ThumbsUp, ThumbsDown, Lightbulb, RotateCcw, Loader2 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import React, { useState, useRef, useEffect } from 'react';
 
 const App = () => {
+  useEffect(() => {
+  const PING_INTERVAL = 5 * 60 * 1000; // 5 minutes
+
+  const pingBackend = () => {
+    fetch("https://resumeevaluaterai.onrender.com/health")
+      .then(() => console.log("Backend pinged 🗿"))
+      .catch(err => console.error("Ping failed:", err));
+  };
+
+  // Initial ping on load
+  pingBackend();
+
+  const interval = setInterval(pingBackend, PING_INTERVAL);
+
+  return () => clearInterval(interval);
+}, []);
+
   const [currentPage, setCurrentPage] = useState('upload');
   const [resumeFile, setResumeFile] = useState(null);
   const [evaluation, setEvaluation] = useState(null);
