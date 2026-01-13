@@ -157,3 +157,6 @@ JSON format:
             "badPoints": ["AI service unavailable"],
             "recommendations": ["Please try again later"]
         }
+@app.get("/health")
+def health():
+    return {"status": "ok"}
