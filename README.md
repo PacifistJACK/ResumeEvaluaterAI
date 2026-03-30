@@ -2,7 +2,6 @@
 
 **ResumeAI** is an AI-powered resume evaluation web application that analyzes uploaded resumes and provides a score, strengths, weaknesses, and actionable recommendations to help users improve their chances of landing a job.
 
-⚠️ **Note:** This project is still under active development. Features, UI, and AI evaluation logic may change or improve over time.
 
 🔗 **Live Demo:** https://resume210.onrender.com/
 
