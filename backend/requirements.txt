@@ -4,3 +4,4 @@ python-multipart
 pymupdf
 requests
 python-dotenv
+httpx
