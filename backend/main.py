@@ -112,7 +112,7 @@ JSON format:
 """
 
     payload = {
-        "model": "qwen/qwen3.6-plus:free",
+        "model": "nvidia/nemotron-3.5-content-safety:free",
         "messages": [
             {
                 "role": "user",
